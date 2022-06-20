@@ -19,3 +19,31 @@
 	margin-top: 1rem;
 	display: flex;
 }
+.social__media a {
+	text-decoration: none;
+	color: var(--main-text-color);
+	font-size: 24px;
+	padding: 1rem  4rem;
+	border: 1px solid var(--border);
+	min-width: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+}
+.social__media a:hover {
+	color: var(--activated-text-color);
+	background-color: var(--bg-activated);
+  font-weight: 700;
+}
+@keyframes backgroundTransition {
+	0% {
+		background-position: 0% 80%;
+	}
+	50% {
+		background-position: 80% 100%;
+	}
+	100% {
+		background-position: 0% 90%;
+	}
+}
