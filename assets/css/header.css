@@ -1,0 +1,21 @@
+.header__wrapper {
+	height: 100vh;
+	width: 100vw;
+	background: var(--gradient);
+	background-size: 400% 400%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	position:relative;
+	animation: backgroundTransition 8s ease-in-out infinite;
+}
+.header__wrapper h1, 
+.header__wrapper h2 {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+.social__media {
+	margin-top: 1rem;
+	display: flex;
+}
