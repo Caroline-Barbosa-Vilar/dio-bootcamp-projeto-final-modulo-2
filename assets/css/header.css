@@ -1,41 +1,82 @@
-.header__wrapper {
+.header {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	background: var(--gradient);
 	background-size: 400% 400%;
 	display: flex;
+  flex-direction: column;
 	justify-content: center;
-	flex-direction: column;
 	align-items: center;
 	position:relative;
 	animation: backgroundTransition 8s ease-in-out infinite;
 }
-.header__wrapper h1, 
-.header__wrapper h2 {
-	text-transform: uppercase;
-	letter-spacing: 4px;
-}
-.social__media {
-	margin-top: 1rem;
-	display: flex;
-}
-.social__media a {
-	text-decoration: none;
-	color: var(--main-text-color);
-	font-size: 24px;
-	padding: 1rem  4rem;
-	border: 1px solid var(--border);
-	min-width: 4rem;
+.checkbox__container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
 }
-.social__media a:hover {
-	color: var(--activated-text-color);
-	background-color: var(--bg-activated);
-  font-weight: 700;
+.checkbox {
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 9999;
+	transition: 400ms ease-in-out 0;
 }
+.checkbox .trace {
+	width: 50px;
+	height: 2px;
+	background-color: var(--trace-main-color);
+	position: absolute;
+	border-radius: 4px;
+	transition: 0.5s ease-in-out;
+}
+.checkbox .trace:nth-child(1) {
+	top: 26px;
+	transform: rotate(0);
+}
+.checkbox .trace:nth-child(2) {
+	top: 46px;
+	transform: rotate(0);
+}
+.checkbox .trace:nth-child(3) {
+	top: 66px;
+	transform: rotate(0);
+}
+#toggle {
+	display: none;
+}
+#toggle:checked + .checkbox .trace:nth-child(1) {
+	transform: rotate(45deg);
+	background-color: var(--trace-activated);
+	top: 47px;
+} 
+#toggle:checked + .checkbox .trace:nth-child(2) {
+	transform: translateX(-100px);
+	width: 30px;
+	visibility: hidden;
+	opacity: 0;
+}
+#toggle:checked + .checkbox .trace:nth-child(3) {
+	transform: rotate(-45deg);
+	background-color: var(--trace-activated);
+	top: 48px;
+}
+#toggle:checked + .checkbox {
+	background-color: var(--buble-bg-color);
+}
+#toggle:checked ~ .menu {
+	box-shadow: 0px 0px 0px 100vmax var(--buble-bg-color);
+	z-index: 1;
+}
+#toggle:checked ~ .menu__items {
+	visibility: visible;
+	opacity: 1;
+} 
 @keyframes backgroundTransition {
 	0% {
 		background-position: 0% 80%;

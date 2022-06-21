@@ -1,0 +1,20 @@
+.social__media {
+	margin-top: 1rem;
+	display: flex;
+}
+.social__media a {
+	min-width: 4rem;
+	color: var(--main-text-color);
+	font-size: 24px;
+	border: 1px solid var(--border);
+	padding: 1rem 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+}
+.social__media a:hover {
+	color: var(--activated-text-color);
+	background-color: var(--bg-activated);
+  font-weight: 700;
+}

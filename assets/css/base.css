@@ -3,7 +3,10 @@
 :root {
 	--main-text-color: #0a0a16;
   --activated-text-color: #e9d2c0;
+  --trace-activated: #695e8d;
+  --trace-main-color: #0a0a16;
   --bg-activated: #695e8d;
+  --bubble-bg-color: #d0ceba;
 	--border: #0a0a16;
 	--gradient: linear-gradient(-45deg, #e9d2c0, #d0ceba, #488d66, #695e8d, #2b2d5a);
 
